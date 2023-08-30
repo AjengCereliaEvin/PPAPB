@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:textColor="@android:color/transparent"
+        android:textSize="30sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/topText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:text="BMI Calculator"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/top"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <TextView
+        android:id="@+id/weightText"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="40dp"
+        android:text="Berat Badan"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topText"
+        tools:layout_editor_absoluteX="100dp" />
+
+
+    <EditText
+        android:id="@+id/inputWeight"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/round_border"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="@string/weight"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="176dp"
+
+        app:layout_constraintTop_toBottomOf="@id/weightText"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/heightText"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"
+        android:text="Tinggi Badan"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputWeight"
+        tools:layout_editor_absoluteX="100dp" />
+
+    <EditText
+        android:id="@+id/inputHeight"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/round_border"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="@string/height"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heightText" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputHeight"
+        tools:layout_editor_absoluteY="459dp">
+
+        <Button
+            android:id="@+id/btnToast"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_button"
+            android:text="TOAST"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/btnCount"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/round_button"
+            android:text="HITUNG"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/btnToast"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="100sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
